@@ -7,7 +7,7 @@
     "start": "nodemon index",
     "staging": "NODE_ENV=staging nodemon index",
     "production": "NODE_ENV=production nodemon index",
-    "git": "(git add . && git commit -m 'sendTwilioSms_done') & git push origin development"
+    "git": "(git add . && git commit -m 'worker_file_add') & git push origin development"
   },
   "author": "",
   "license": "ISC",
