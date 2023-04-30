@@ -84,11 +84,8 @@
 				},
 				{
 					"name": "Create",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [
 							{
 								"key": "name",
@@ -98,10 +95,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Rayhan\",\r\n    \"lastName\": \"Al Shorif23\",\r\n    \"phone\": \"01923988320\",\r\n    \"password\": \"password\",\r\n    \"tosAgreement\":true\r\n}"
+							"raw": "{\r\n    \"firstName\": \"Rayhan\",\r\n    \"lastName\": \"Al Shorif23\",\r\n    \"phone\": \"01323174104\",\r\n    \"password\": \"password\",\r\n    \"tosAgreement\":true\r\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/user?phone=01923988382",
+							"raw": "http://localhost:3000/user",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -109,12 +106,6 @@
 							"port": "3000",
 							"path": [
 								"user"
-							],
-							"query": [
-								{
-									"key": "phone",
-									"value": "01923988382"
-								}
 							]
 						}
 					},
@@ -193,6 +184,180 @@
 			]
 		},
 		{
+			"name": "Check",
+			"item": [
+				{
+					"name": "Fetch-By-Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "gvwjrybcbcb94hfj0g18",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/check?id=wdp00dvtcy72p43uvh5y",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"check"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "wdp00dvtcy72p43uvh5y"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch-All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "test",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user?phone=01923988380",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "01923988380"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "i2uxc34kgf53jvqkubyi",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"protocol\" : \"http\",\r\n    \"url\" : \"google.com\",\r\n    \"method\" : \"GET\",\r\n    \"successCodes\" : [200, 201],\r\n    \"timeOutSeconds\" : 2\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/check",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "name",
+								"value": "test",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "token",
+								"value": "wvy21gvbq2isxefft7v5",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"wdp00dvtcy72p43uvh5y\",\r\n    \"protocol\" : \"https\",\r\n    \"url\" : \"google.com\",\r\n    \"method\" : \"GET\",\r\n    \"successCodes\" : [200, 201],\r\n    \"timeOutSeconds\" : 2\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/check",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "kjftgiwoazr47udcydub",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/check?id=0wt1ta3iybbz02v6sfdh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"check"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0wt1ta3iybbz02v6sfdh"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Token",
 			"item": [
 				{
@@ -202,7 +367,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"phone\": \"01923988320\",\r\n    \"password\": \"password\"\r\n}"
+							"raw": "{\r\n    \"phone\": \"01323174104\",\r\n    \"password\": \"password\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:3000/token",
